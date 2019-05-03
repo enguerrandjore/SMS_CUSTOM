@@ -151,7 +151,7 @@ class sms extends eqLogic {
 			$sender = new smsCmd();
 			$sender->setLogicalId('sender');
 			$sender->setIsVisible(0);
-			$sender->setName(__($sender, __FILE__));
+			$sender->setName(__('Expediteur', __FILE__));
 		}
 		$sender->setType('info');
 		$sender->setSubType('string');
@@ -193,7 +193,7 @@ class smsCmd extends cmd {
 	}
 
 	public function execute($_options = null) {
-		$number = $this->getConfiguration('phonenumber');
+		//$number = $this->getConfiguration('phonenumber');
 		if (isset($_options['number'])) {
 			$number = $_options['number'];
 		}
@@ -218,7 +218,8 @@ class smsCmd extends cmd {
 			$values[] = json_encode(array('apikey' => jeedom::getApiKey('sms'), 'number' => $number, 'message' => $message));
 		}
 		if (!isset($_options['number'])) {
-			$phonenumbers = explode(';', $this->getConfiguration('phonenumber'));
+			$phonenumbers = $_options['number'];
+			//$phonenumbers = explode(';', $this->getConfiguration('phonenumber'));
 			if (is_array($phonenumbers) && count($phonenumbers) > 1) {
 				$tmp_values = array();
 				foreach ($values as $value) {
