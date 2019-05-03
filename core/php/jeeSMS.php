@@ -81,9 +81,10 @@ if (isset($result['devices'])) {
 		$smsOk = false;
 		foreach ($eqLogics as $eqLogic) {
 			foreach ($eqLogic->getCmd() as $cmd) {
+				/* Customisation de ne pas cvontrôler le numéro de l'expéditeur
 				if (strpos($cmd->getConfiguration('phonenumber'), $number) === false && strpos($cmd->getConfiguration('phonenumber'), $formatedPhoneNumber) === false) {
 					continue;
-				}
+				}*/
 				$params = array('plugin' => 'sms');
 				$smsOk = true;
 				log::add('sms', 'info', __('Message venant de ', __FILE__) . $formatedPhoneNumber . ' : ' . trim($message));
