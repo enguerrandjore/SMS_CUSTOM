@@ -151,7 +151,7 @@ class sms extends eqLogic {
 			$sender = new smsCmd();
 			$sender->setLogicalId('sender');
 			$sender->setIsVisible(0);
-			$sender->setName(__('Expediteur', __FILE__));
+			$sender->setName(__($sender, __FILE__));
 		}
 		$sender->setType('info');
 		$sender->setSubType('string');
