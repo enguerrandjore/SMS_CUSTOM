@@ -1,8 +1,8 @@
 Configuration 
 =============
 
-Le plugin SMS permet de dialoguer avec Jeedom par l’intermediaire des
-SMS, il permet aussi à Jeedom de vous envoyer un SMS en cas d’alerte
+Le plugin sms_custom permet de dialoguer avec Jeedom par l’intermediaire des
+sms_custom, il permet aussi à Jeedom de vous envoyer un sms_custom en cas d’alerte
 (plugin alarme, scénario…​)
 
 > **Important**
@@ -18,7 +18,7 @@ plugin est déjà configuré par défaut ; vous n’avez donc rien à faire de
 plus. Cependant vous pouvez modifier cette configuration. Voici le
 détail (certains paramètres peuvent n’être visibles qu’en mode expert) :
 
--   *Port SMS* : le port USB sur lequel votre clef GSM
+-   *Port sms_custom* : le port USB sur lequel votre clef GSM
         est connectée.
 
 > **Tip**
@@ -36,21 +36,21 @@ détail (certains paramètres peuvent n’être visibles qu’en mode expert) :
 -   **Code pin** : Permet d’indiquer le code pin de la carte SIM, à laisser vide si vous n’en avez pas. 
 -   **Texte mode** : Mode de compatibilité étendu, à n’utiliser que si l’envoi et/ou la réception des messages ne marchent pas.
 -   **Découper les messages par paquet de caractères** : Indique le nombre de caractères maximum par texto.
--   **Passerelle SMS / SMS Gateway (modifier en cas d’erreur : CMS 330 SMSC number not set)** : A nechanger que si vous avez l’erreur "CMS 330 SMSC number not set", dans ce cas il faut indiquer le numéro de passerelle SMS de votre opérateur téléphonique. 
+-   **Passerelle sms_custom / sms_custom Gateway (modifier en cas d’erreur : CMS 330 sms_customC number not set)** : A nechanger que si vous avez l’erreur "CMS 330 sms_customC number not set", dans ce cas il faut indiquer le numéro de passerelle sms_custom de votre opérateur téléphonique. 
 -   **Force du signal** : Force de réception du signal devotre clef GSM.
 -   **Réseau** : Réseau téléphonique de votre clef GSM (peut être à "None" si Jeedom n’arrive pas à le récupérer). 
 -   **socket interne (modification dangereuse)** : permet de modifier le port de communication interne du démon.
--   **Cycle (s)** : cycle de scrutation du démon pour l'envoi et la reception des SMS. Un chiffre trop bas peut amener certaine instabilité
+-   **Cycle (s)** : cycle de scrutation du démon pour l'envoi et la reception des sms_custom. Un chiffre trop bas peut amener certaine instabilité
 
 Configuration des équipements 
 -----------------------------
 
-La configuration des équipements SMS est accessible à partir du menu
+La configuration des équipements sms_custom est accessible à partir du menu
 plugin puis communication
 
 Vous retrouvez ici toute la configuration de votre équipement :
 
--   **Nom de l’équipement SMS** : nom de votre équipement SMS,
+-   **Nom de l’équipement sms_custom** : nom de votre équipement sms_custom,
 
 -   **Activer** : permet de rendre votre équipement actif,
 
@@ -89,7 +89,7 @@ Utilisation du plugin
 ---------------------
 
 Celui-ci est assez standard dans son fonctionnement, sur la page Général
-→ Plugin puis en sélectionnant le plugin SMS :
+→ Plugin puis en sélectionnant le plugin sms_custom :
 
 -   Le port (chemin) jusqu’au périphérique qui sert de modem (par
     exemple ce peut être /dev/ttyUSB0, pour le voir il suffit de lancer
@@ -106,7 +106,7 @@ Celui-ci est assez standard dans son fonctionnement, sur la page Général
     Puis il faut ajouter les commandes qui seront composées d’un nom et
     d’un numéro, seuls les numéros listés dans la liste des commandes
     peuvent recevoir une réponse de Jeedom (cela permet de sécuriser,
-    tout en évitant de mettre un mot de passe à chaque début de SMS
+    tout en évitant de mettre un mot de passe à chaque début de sms_custom
     envoyé à Jeedom). Vous pouvez aussi indiquer quel utilisateur est
     lié à ce numéro (pour la gestion des droits au niveau
     des interactions).
@@ -152,7 +152,7 @@ FAQ
 >
 >Vérifiez que vous n’avez pas brltty d’installer (`sudo apt-get remove brltty` pour le supprimer)
 
-> **Au bout de quelques heures/jours je ne recois plus de SMS et ne peux plus en envoyer, une relance du démon corrige**
+> **Au bout de quelques heures/jours je ne recois plus de sms_custom et ne peux plus en envoyer, une relance du démon corrige**
 >
 >Vérifiez votre cable USB (un mauvais cable USB entraine souvent ce
 >genre de soucis, il ne faut pas qu’il soit trop long non plus),
@@ -216,11 +216,11 @@ FAQ
 >SUBSYSTEM=="usb", ATTRS{idVendor}=="1bbb", ATTRS{idProduct}=="f000", RUN+="/usr/sbin/usb_modeswitch -c /etc/usb_modeswitch.conf"
 >```
 >
->Sous jeedom dans le plugin SMS, il faut (dans mon cas) utiliser le "port
->SMS" suivant : /dev/ttyUSB3. En gros il faut essayer chaque port pour
+>Sous jeedom dans le plugin sms_custom, il faut (dans mon cas) utiliser le "port
+>sms_custom" suivant : /dev/ttyUSB3. En gros il faut essayer chaque port pour
 >trouver le bon…​
 
-> **Le démons SMS est bien démarré, mais vous ne recevez aucun SMS**
+> **Le démons sms_custom est bien démarré, mais vous ne recevez aucun sms_custom**
 >
 >Une des causes probables est la mauvaise configuration réseau. Dans
 >"Général" &gt; "Configuration" &gt; "Administration" &gt;
@@ -254,7 +254,7 @@ FAQ
 >même plus) ports USB au niveau système. Il suffit d’en choisir un,
 >peut importe lequel.
 
-> **Jeedom n’envoie plus et ne reçoit plus de SMS**
+> **Jeedom n’envoie plus et ne reçoit plus de sms_custom**
 >
 >Ceci arrive en général si la clef GSM n’arrive plus à se connecter
 >au réseau. Essayer de la déplacer et de voir si ça revient au bout

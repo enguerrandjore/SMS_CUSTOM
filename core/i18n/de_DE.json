@@ -1,14 +1,14 @@
 {
-    "plugins/sms/plugin_info/configuration.php": {
-        "Le démon SMS est en marche": "SMS-Daemon läuft",
-        "Port SMS": "SMS Port",
+    "plugins/sms_custom/plugin_info/configuration.php": {
+        "Le démon sms_custom est en marche": "sms_custom-Daemon läuft",
+        "Port sms_custom": "sms_custom Port",
         "Aucun": "Ohne",
         "Auto": "Auto",
         "Code pin (laisser vide s'il n'y en a pas)": "Pin-Code (leer lassen wenn es keinen gibt)",
         "Texte mode": "Textmodus",
-        "A utiliser si vous ne recevez pas de message (compatibilité avec un maximum de modem) mais enleve le support des SMS multiple et des caractères spéciaux": "Verwenden Sie diese Funktion wenn Sie keine Nachricht empfangen (Kompatibilität mit den meisten Modem), aber entfernt multi SMS-Unterstützung, und Sonderzeichen",
-        "Passerelle SMS / SMS Gateway (modifer cas d'erreur : CMS 330 (SMSC number not set)": "SMS Gateway / SMS Gateway (ÄNDERN Fehler: CMS 330 (SMSC-Nummer nicht festgelegt)",
-        "Utiliser le code #*#*4636#*#* sur un mobile pour trouver le SMSC de votre opérateur": "Verwenden Sie den Code * # 4636 # * # * # * auf einem mobilen, dem SMSC Ihrem Netzbetreiber finden",
+        "A utiliser si vous ne recevez pas de message (compatibilité avec un maximum de modem) mais enleve le support des sms_custom multiple et des caractères spéciaux": "Verwenden Sie diese Funktion wenn Sie keine Nachricht empfangen (Kompatibilität mit den meisten Modem), aber entfernt multi sms_custom-Unterstützung, und Sonderzeichen",
+        "Passerelle sms_custom / sms_custom Gateway (modifer cas d'erreur : CMS 330 (sms_customC number not set)": "sms_custom Gateway / sms_custom Gateway (ÄNDERN Fehler: CMS 330 (sms_customC-Nummer nicht festgelegt)",
+        "Utiliser le code #*#*4636#*#* sur un mobile pour trouver le sms_customC de votre opérateur": "Verwenden Sie den Code * # 4636 # * # * # * auf einem mobilen, dem sms_customC Ihrem Netzbetreiber finden",
         "Force du signal": "Die Signalstärke",
         "Port socket interne (modification dangereuse, doit etre le meme surtout les esclaves)": "Intern socket port (gefährliche änderung, muss auf alle Slaves gleich sein)",
         "Gestion du démon": "Management-Daemon",
@@ -18,25 +18,25 @@
         "Le démon a été correctement (re)démaré": "Der Dämon korrekt wieder gestartet()",
         "Le démon a été correctement arreté": "Der Dämon wurde erfolgreich gestoppt",
         "Etes-vous sur de vouloir lancer le démon en mode debug ? N\\'oubliez pas de le relancer en mode normale une fois terminé": "Sind Sie sicher, dass Sie den Daemon im Debug-Modus starten wollen? Nicht vergessen, im normalen Modus neu zu starten, wenn Sie fertig sind.",
-        "SMS en mode debug": "SMS im Debug-Modus",
+        "sms_custom en mode debug": "sms_custom im Debug-Modus",
         "Statut du démon : ": "Daemon Status",
         "En local :": "Ort:",
         "Démon local": "Lokal Daemon",
         "Vitesse de communication (bauds)": "Übertragungsgeschwindigkeit (Baud)",
         "Découper les messages par paquet de caractères": "Découper les messages par paquet de caractères",
         "Par defaut 140": "Par defaut 140",
-        "Passerelle SMS / SMS Gateway (modifer cas d'erreur : CMS 330 SMSC number not set)": "Passerelle SMS / SMS Gateway (modifer cas d'erreur : CMS 330 SMSC number not set)",
+        "Passerelle sms_custom / sms_custom Gateway (modifer cas d'erreur : CMS 330 sms_customC number not set)": "Passerelle sms_custom / sms_custom Gateway (modifer cas d'erreur : CMS 330 sms_customC number not set)",
         "Réseaux": "Réseaux",
         "Port socket interne": "Interner Socket Port ",
         "Cycle (s)": "Zyklus (s)",
         "Démon": "Daemon"
     },
-    "plugins/sms/desktop/php/sms.php": {
+    "plugins/sms_custom/desktop/php/sms_custom.php": {
         "Ajouter un équipement": "Gerät hinzufügen",
         "Rechercher": "Suchen nach",
-        "Mes SMS": "Mein SMS",
+        "Mes sms_custom": "Mein sms_custom",
         "Générale": "Allgemein",
-        "Nom de l'équipement SMS": "Name der SMS-Ausstattung",
+        "Nom de l'équipement sms_custom": "Name der sms_custom-Ausstattung",
         "Nom de l'équipement GSM": "Name der GSM Ausrüstung",
         "Activer": "aktivieren",
         "Visible": "Sichtbar",
@@ -55,23 +55,23 @@
         "Equipement": "Gerät",
         "Configuration avancée": "Erweiterte Konfiguration"
     },
-    "plugins/sms/plugin_info/info.xml": {
-        "Plugin permettant de gérer les SMS": "Plugin permettant de gérer les SMS",
+    "plugins/sms_custom/plugin_info/info.xml": {
+        "Plugin permettant de gérer les sms_custom": "Plugin permettant de gérer les sms_custom",
         "null": ""
     },
-    "plugins/sms/desktop/js/sms.js": {
+    "plugins/sms_custom/desktop/js/sms_custom.js": {
         "Historiser": "Chronik",
         "Afficher": "anzeigen",
         "Tester": "Test"
     },
-    "plugins/sms/core/php/jeeSMS.php": {
+    "plugins/sms_custom/core/php/jeesms_custom.php": {
         "Message venant de ": "Message venant de",
         "\nRéponse : ": "Antwort :"
     },
-    "plugins/sms/plugin_info/info.json": {
-        "Plugin permettant d'ajouter le support de clef GSM (pour les SMS uniquement)": "Plugin permettant d'ajouter le support de clef GSM (pour les SMS uniquement)"
+    "plugins/sms_custom/plugin_info/info.json": {
+        "Plugin permettant d'ajouter le support de clef GSM (pour les sms_custom uniquement)": "Plugin permettant d'ajouter le support de clef GSM (pour les sms_custom uniquement)"
     },
-    "plugins/sms/core/class/sms.class.php": {
+    "plugins/sms_custom/core/class/sms_custom.class.php": {
         "Signal": "Signal",
         "Message": "Nachricht",
         "Expediteur": "Absender",

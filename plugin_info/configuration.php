@@ -25,7 +25,7 @@ if (!isConnect('admin')) {
     <fieldset>
         <legend><i class="icon loisir-darth"></i> {{Démon}}</legend>
         <div class="form-group">
-            <label class="col-lg-4 control-label">{{Port SMS}}</label>
+            <label class="col-lg-4 control-label">{{Port sms_custom}}</label>
             <div class="col-lg-4">
                 <select class="configKey form-control" data-l1key="port">
                     <option value="none">{{Aucun}}</option>
@@ -59,7 +59,7 @@ foreach (ls('/dev/', 'tty*') as $value) {
     <div class="form-group">
         <label class="col-lg-4 control-label">{{Texte mode}}</label>
         <div class="col-lg-4">
-            <input type="checkbox" class="configKey" data-l1key="text_mode" title='{{A utiliser si vous ne recevez pas de message (compatibilité avec un maximum de modem) mais enleve le support des SMS multiple et des caractères spéciaux}}' />
+            <input type="checkbox" class="configKey" data-l1key="text_mode" title='{{A utiliser si vous ne recevez pas de message (compatibilité avec un maximum de modem) mais enleve le support des sms_custom multiple et des caractères spéciaux}}' />
         </div>
     </div>
     <div class="form-group">
@@ -69,9 +69,9 @@ foreach (ls('/dev/', 'tty*') as $value) {
         </div>
     </div>
     <div class="form-group">
-        <label class="col-lg-4 control-label">{{Passerelle SMS / SMS Gateway (modifer cas d'erreur : CMS 330 SMSC number not set)}}</label>
+        <label class="col-lg-4 control-label">{{Passerelle sms_custom / sms_custom Gateway (modifer cas d'erreur : CMS 330 sms_customC number not set)}}</label>
         <div class="col-lg-2">
-            <input class="configKey form-control" data-l1key="smsc" title='{{Utiliser le code #*#*4636#*#* sur un mobile pour trouver le SMSC de votre opérateur}}'/>
+            <input class="configKey form-control" data-l1key="sms_customc" title='{{Utiliser le code #*#*4636#*#* sur un mobile pour trouver le sms_customC de votre opérateur}}'/>
         </div>
     </div>
     <div class="form-group">

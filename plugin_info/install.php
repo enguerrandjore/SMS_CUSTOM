@@ -18,19 +18,19 @@
 
 require_once dirname(__FILE__) . '/../../../core/php/core.inc.php';
 
-function sms_install() {
-	if (config::byKey('api::sms::mode') == '') {
-		config::save('api::sms::mode', 'localhost');
+function sms_custom_install() {
+	if (config::byKey('api::sms_custom::mode') == '') {
+		config::save('api::sms_custom::mode', 'localhost');
 	}
 }
 
-function sms_update() {
-	if (config::byKey('api::sms::mode') == '') {
-		config::save('api::sms::mode', 'localhost');
+function sms_custom_update() {
+	if (config::byKey('api::sms_custom::mode') == '') {
+		config::save('api::sms_custom::mode', 'localhost');
 	}
 }
 
-function sms_remove() {
+function sms_custom_remove() {
 
 }
 

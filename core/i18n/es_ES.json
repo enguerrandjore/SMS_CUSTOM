@@ -1,14 +1,14 @@
 {
-    "plugins/sms/plugin_info/configuration.php": {
-        "Le démon SMS est en marche": "El demonio SMS está en marcha",
-        "Port SMS": "Puerto SMS",
+    "plugins/sms_custom/plugin_info/configuration.php": {
+        "Le démon sms_custom est en marche": "El demonio sms_custom está en marcha",
+        "Port sms_custom": "Puerto sms_custom",
         "Aucun": "Ningún",
         "Auto": "Auto",
         "Code pin (laisser vide s'il n'y en a pas)": "Código PIN (dejar en blanco si no hay ninguno)",
         "Texte mode": "Texto modo",
-        "A utiliser si vous ne recevez pas de message (compatibilité avec un maximum de modem) mais enleve le support des SMS multiple et des caractères spéciaux": "Use esto si usted no recibe mensajes (compatibilidad con un máximo de módem), pero elimina el soporte SMS múltiple y caracteres especiales",
-        "Passerelle SMS / SMS Gateway (modifer cas d'erreur : CMS 330 (SMSC number not set)": "Pasarela SMS / SMS Gateway (modificar caso de error: CMS 330 (SMSC number not set)",
-        "Utiliser le code #*#*4636#*#* sur un mobile pour trouver le SMSC de votre opérateur": "Utilice el código #*#*4636#*#* en un móvil para encontrar el SMSC de su operador",
+        "A utiliser si vous ne recevez pas de message (compatibilité avec un maximum de modem) mais enleve le support des sms_custom multiple et des caractères spéciaux": "Use esto si usted no recibe mensajes (compatibilidad con un máximo de módem), pero elimina el soporte sms_custom múltiple y caracteres especiales",
+        "Passerelle sms_custom / sms_custom Gateway (modifer cas d'erreur : CMS 330 (sms_customC number not set)": "Pasarela sms_custom / sms_custom Gateway (modificar caso de error: CMS 330 (sms_customC number not set)",
+        "Utiliser le code #*#*4636#*#* sur un mobile pour trouver le sms_customC de votre opérateur": "Utilice el código #*#*4636#*#* en un móvil para encontrar el sms_customC de su operador",
         "Force du signal": "Intensidad de la señal",
         "Port socket interne (modification dangereuse, doit etre le meme surtout les esclaves)": "Port socket (modificacion peligrosa, debe ser el mismo sobre todo los esclavos)",
         "Gestion du démon": "Gestión del demonio",
@@ -18,25 +18,25 @@
         "Le démon a été correctement (re)démaré": "El demonio ha sido correctamente (re)iniciado",
         "Le démon a été correctement arreté": "El demonio se detuvo correctamente",
         "Etes-vous sur de vouloir lancer le démon en mode debug ? N\\'oubliez pas de le relancer en mode normale une fois terminé": "¿Está seguro de querer lanzar el demonio en modo debug? No se olvide reactivarlo en modo normal una vez acabado",
-        "SMS en mode debug": "SMS en modo debug",
+        "sms_custom en mode debug": "sms_custom en modo debug",
         "Statut du démon : ": "Estado del demonio:",
         "En local :": "Localmente:",
         "Démon local": "Demonio local",
         "Vitesse de communication (bauds)": "Velocidad de comunicación (baudios)",
         "Découper les messages par paquet de caractères": "Cortar mensajes por paquete de caracteres",
         "Par defaut 140": "Por defecto 140",
-        "Passerelle SMS / SMS Gateway (modifer cas d'erreur : CMS 330 SMSC number not set)": "Pasarela SMS / SMS Gateway (cambiar en caso de error: CMS 330 SMSC number not set)",
+        "Passerelle sms_custom / sms_custom Gateway (modifer cas d'erreur : CMS 330 sms_customC number not set)": "Pasarela sms_custom / sms_custom Gateway (cambiar en caso de error: CMS 330 sms_customC number not set)",
         "Réseaux": "Redes",
         "Port socket interne": "Puerto socket interno",
         "Cycle (s)": "Ciclo (s)",
         "Démon": "Demonio"
     },
-    "plugins/sms/desktop/php/sms.php": {
+    "plugins/sms_custom/desktop/php/sms_custom.php": {
         "Ajouter un équipement": "Añadir un dispositivo",
         "Rechercher": "Buscar",
-        "Mes SMS": "Mis SMS",
+        "Mes sms_custom": "Mis sms_custom",
         "Générale": "General",
-        "Nom de l'équipement SMS": "Nombre del dispositivo SMS",
+        "Nom de l'équipement sms_custom": "Nombre del dispositivo sms_custom",
         "Nom de l'équipement GSM": "Nombre del dispositivo GSM",
         "Activer": "Activar",
         "Visible": "Visible",
@@ -55,23 +55,23 @@
         "Equipement": "Dispositivos",
         "Configuration avancée": "Configuración avanzada"
     },
-    "plugins/sms/plugin_info/info.xml": {
-        "Plugin permettant de gérer les SMS": "Plugin para la gestión de SMS",
+    "plugins/sms_custom/plugin_info/info.xml": {
+        "Plugin permettant de gérer les sms_custom": "Plugin para la gestión de sms_custom",
         "null": ""
     },
-    "plugins/sms/desktop/js/sms.js": {
+    "plugins/sms_custom/desktop/js/sms_custom.js": {
         "Historiser": "Historizar",
         "Afficher": "Mostrar",
         "Tester": "Probar"
     },
-    "plugins/sms/core/php/jeeSMS.php": {
+    "plugins/sms_custom/core/php/jeesms_custom.php": {
         "Message venant de ": "Mensaje de",
         "\nRéponse : ": "Respuesta :"
     },
-    "plugins/sms/plugin_info/info.json": {
-        "Plugin permettant d'ajouter le support de clef GSM (pour les SMS uniquement)": "Plugin para añadir soporte de clave GSM (sólo para SMS)"
+    "plugins/sms_custom/plugin_info/info.json": {
+        "Plugin permettant d'ajouter le support de clef GSM (pour les sms_custom uniquement)": "Plugin para añadir soporte de clave GSM (sólo para sms_custom)"
     },
-    "plugins/sms/core/class/sms.class.php": {
+    "plugins/sms_custom/core/class/sms_custom.class.php": {
         "Signal": "Señal",
         "Message": "Mensaje",
         "Expediteur": "Remitente",
