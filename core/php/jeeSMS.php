@@ -17,7 +17,7 @@
  */
 require_once dirname(__FILE__) . "/../../../../core/php/core.inc.php";
 
-if (!jeedom::apiAccess(init('apikey'), 'sms_custom')) {
+if (!jeedom::apiAccess(init('apikey'), 'sms')) {
 	echo __('Vous n\'etes pas autorisé à effectuer cette action', __FILE__);
 	die();
 }
@@ -31,8 +31,8 @@ if (!is_array($result)) {
 }
 
 if (isset($result['number']) && $result['number'] == 'signal_strength' && isset($result['message'])) {
-	config::save('signal_strengh', $result['message'], 'sms_custom');
-	foreach (eqLogic::byType('sms_custom') as $eqLogic) {
+	config::save('signal_strengh', $result['message'], 'sms');
+	foreach (eqLogic::byType('sms') as $eqLogic) {
 		$cmd = $eqLogic->getCmd(null, 'signal');
 		if (is_object($cmd)) {
 			$cmd->event($result['message']);
@@ -42,17 +42,17 @@ if (isset($result['number']) && $result['number'] == 'signal_strength' && isset(
 }
 
 if (isset($result['number']) && $result['number'] == 'network_name' && isset($result['message'])) {
-	config::save('network_name', $result['message'], 'sms_custom');
+	config::save('network_name', $result['message'], 'sms');
 	die();
 }
 
 if (isset($result['number']) && $result['number'] == 'none' && isset($result['message'])) {
-	message::add('sms_custom', 'Error : ' . $result['message'], '', 'sms_customcmderror');
+	message::add('sms', 'Error : ' . $result['message'], '', 'smscmderror');
 	if (strpos($result['message'], 'PIN') !== false) {
-		config::save('deamonAutoMode', 0, 'sms_custom');
+		config::save('deamonAutoMode', 0, 'sms');
 	}
 }
-$eqLogics = eqLogic::byType('sms_custom');
+$eqLogics = eqLogic::byType('sms');
 if (count($eqLogics) < 1) {
 	return;
 }
@@ -67,9 +67,9 @@ if (isset($result['devices'])) {
 			continue;
 		}
 		if ($number == 'none') {
-			message::add('sms_custom', 'Error : ' . $message, '', 'sms_customcmderror');
+			message::add('sms', 'Error : ' . $message, '', 'smscmderror');
 			if (strpos($message, 'PIN') !== false) {
-				config::save('allowStartDeamon', 0, 'sms_custom');
+				config::save('allowStartDeamon', 0, 'sms');
 			}
 			continue;
 		}
@@ -78,15 +78,15 @@ if (isset($result['devices'])) {
 		}
 		$formatedPhoneNumber = '0' . substr($number, 3);
 		$reply = '';
-		$sms_customOk = false;
+		$smsOk = false;
 		foreach ($eqLogics as $eqLogic) {
 			foreach ($eqLogic->getCmd() as $cmd) {
 				if (strpos($cmd->getConfiguration('phonenumber'), $number) === false && strpos($cmd->getConfiguration('phonenumber'), $formatedPhoneNumber) === false) {
 					continue;
 				}
-				$params = array('plugin' => 'sms_custom');
-				$sms_customOk = true;
-				log::add('sms_custom', 'info', __('Message venant de ', __FILE__) . $formatedPhoneNumber . ' : ' . trim($message));
+				$params = array('plugin' => 'sms');
+				$smsOk = true;
+				log::add('sms', 'info', __('Message venant de ', __FILE__) . $formatedPhoneNumber . ' : ' . trim($message));
 				if ($cmd->askResponse($message)) {
 					continue (3);
 				}
@@ -101,21 +101,21 @@ if (isset($result['devices'])) {
 					$reply = interactQuery::tryToReply(trim($message), $params);
 					if (trim($reply['reply']) != '') {
 						$cmd->execute(array('title' => $reply['reply'], 'message' => '', 'number' => $number));
-						log::add('sms_custom', 'info', __("\nRéponse : ", __FILE__) . $reply['reply']);
+						log::add('sms', 'info', __("\nRéponse : ", __FILE__) . $reply['reply']);
 					}
 				} else {
-					log::add('sms_custom', 'debug', __("Interaction désactivée.", __FILE__));
+					log::add('sms', 'debug', __("Interaction désactivée.", __FILE__));
 				}
-				$cmd_sms_custom = $cmd->getEqlogic()->getCmd('info', 'sms_custom');
-				$cmd_sms_custom->event(trim($message));
+				$cmd_sms = $cmd->getEqlogic()->getCmd('info', 'sms');
+				$cmd_sms->event(trim($message));
 				$cmd_sender = $cmd->getEqlogic()->getCmd('info', 'sender');
 				$cmd_sender->event($cmd->getName());
 				break;
 			}
 		}
 
-		if (!$sms_customOk) {
-			log::add('sms_custom', 'info', __('Message venant d\un numéro non autorisé : ', __FILE__) . secureXSS($number) . ' (' . secureXSS($formatedPhoneNumber) . ') : ' . secureXSS(trim($message)));
+		if (!$smsOk) {
+			log::add('sms', 'info', __('Message venant d\un numéro non autorisé : ', __FILE__) . secureXSS($number) . ' (' . secureXSS($formatedPhoneNumber) . ') : ' . secureXSS(trim($message)));
 		}
 	}
 }

@@ -1,14 +1,14 @@
 {
-    "plugins/sms_custom/plugin_info/configuration.php": {
-        "Le démon sms_custom est en marche": "sms_custom daemonu çalışiyor",
-        "Port sms_custom": "sms_custom Port",
+    "plugins/sms/plugin_info/configuration.php": {
+        "Le démon SMS est en marche": "SMS daemonu çalışiyor",
+        "Port SMS": "SMS Port",
         "Aucun": "Hiçbir",
         "Auto": "Otomatik",
         "Code pin (laisser vide s'il n'y en a pas)": "Pin kodu (yok ise boş bırakın)",
         "Texte mode": "Metin mod",
-        "A utiliser si vous ne recevez pas de message (compatibilité avec un maximum de modem) mais enleve le support des sms_custom multiple et des caractères spéciaux": "Mesaj almiyorsanız kullanılacak (maksimum modem ile uyumlu) ama özel karakter ve multi sms_custom desteğini kaldırır",
-        "Passerelle sms_custom / sms_custom Gateway (modifer cas d'erreur : CMS 330 (sms_customC number not set)": "Ağ Geçidi sms_custom / sms_custom Gateway (hatalara DEğIşIKLIK: CMS 330 (sms_customC numarası belirtilmedi)",
-        "Utiliser le code #*#*4636#*#* sur un mobile pour trouver le sms_customC de votre opérateur": "Opratörünüzün sms_customC sini bulmak için mobil üzerinde #*#*4636#*#* kodunu kullanın",
+        "A utiliser si vous ne recevez pas de message (compatibilité avec un maximum de modem) mais enleve le support des SMS multiple et des caractères spéciaux": "Mesaj almiyorsanız kullanılacak (maksimum modem ile uyumlu) ama özel karakter ve multi SMS desteğini kaldırır",
+        "Passerelle SMS / SMS Gateway (modifer cas d'erreur : CMS 330 (SMSC number not set)": "Ağ Geçidi SMS / SMS Gateway (hatalara DEğIşIKLIK: CMS 330 (SMSC numarası belirtilmedi)",
+        "Utiliser le code #*#*4636#*#* sur un mobile pour trouver le SMSC de votre opérateur": "Opratörünüzün SMSC sini bulmak için mobil üzerinde #*#*4636#*#* kodunu kullanın",
         "Force du signal": "Signal gücü",
         "Port socket interne (modification dangereuse, doit etre le meme surtout les esclaves)": "Iç port socket (değişim tehlikeli, her eğer de ayni olması lazım)",
         "Gestion du démon": "Daemon yönetimi",
@@ -18,25 +18,25 @@
         "Le démon a été correctement (re)démaré": "Daemon başarıyla (tekrar başlatıldı)",
         "Le démon a été correctement arreté": "Daemon başarıyla durduruldu",
         "Etes-vous sur de vouloir lancer le démon en mode debug ? N\\'oubliez pas de le relancer en mode normale une fois terminé": "Daemonu debug modunda açmak istediğinizden eminmisiniz ? Bitince normal modda tekrar açmayı unutmayın",
-        "sms_custom en mode debug": "debug modunda sms_custom",
+        "SMS en mode debug": "debug modunda SMS",
         "Statut du démon : ": "Daemon\\'nun durumu",
         "En local :": "Yerelde :",
         "Démon local": "Yerel Daemon",
         "Vitesse de communication (bauds)": "Iletişim hızı (bauds)",
         "Découper les messages par paquet de caractères": "Découper les messages par paquet de caractères",
         "Par defaut 140": "Par defaut 140",
-        "Passerelle sms_custom / sms_custom Gateway (modifer cas d'erreur : CMS 330 sms_customC number not set)": "Passerelle sms_custom / sms_custom Gateway (modifer cas d'erreur : CMS 330 sms_customC number not set)",
+        "Passerelle SMS / SMS Gateway (modifer cas d'erreur : CMS 330 SMSC number not set)": "Passerelle SMS / SMS Gateway (modifer cas d'erreur : CMS 330 SMSC number not set)",
         "Réseaux": "Réseaux",
         "Port socket interne": "İç socket port",
         "Cycle (s)": "Devir",
         "Démon": "Daemon"
     },
-    "plugins/sms_custom/desktop/php/sms_custom.php": {
+    "plugins/sms/desktop/php/sms.php": {
         "Ajouter un équipement": "Ekipman ekle",
         "Rechercher": "Arayın",
-        "Mes sms_custom": "sms_custom\\'lerim",
+        "Mes SMS": "SMS\\'lerim",
         "Générale": "Genel",
-        "Nom de l'équipement sms_custom": "sms_custom cihazının ismi",
+        "Nom de l'équipement SMS": "SMS cihazının ismi",
         "Nom de l'équipement GSM": "GSM cihazının ismi",
         "Activer": "Etkinleştirmek",
         "Visible": "Görülebilir",
@@ -55,23 +55,23 @@
         "Equipement": "Cihaz",
         "Configuration avancée": "Gelişmiş ayarlar"
     },
-    "plugins/sms_custom/plugin_info/info.xml": {
-        "Plugin permettant de gérer les sms_custom": "Plugin permettant de gérer les sms_custom",
+    "plugins/sms/plugin_info/info.xml": {
+        "Plugin permettant de gérer les SMS": "Plugin permettant de gérer les SMS",
         "null": ""
     },
-    "plugins/sms_custom/desktop/js/sms_custom.js": {
+    "plugins/sms/desktop/js/sms.js": {
         "Historiser": "Tarihe göre sırala",
         "Afficher": "Göster",
         "Tester": "Test et"
     },
-    "plugins/sms_custom/core/php/jeesms_custom.php": {
+    "plugins/sms/core/php/jeeSMS.php": {
         "Message venant de ": "Message venant de",
         "\nRéponse : ": "Réponse :"
     },
-    "plugins/sms_custom/plugin_info/info.json": {
-        "Plugin permettant d'ajouter le support de clef GSM (pour les sms_custom uniquement)": "Plugin permettant d'ajouter le support de clef GSM (pour les sms_custom uniquement)"
+    "plugins/sms/plugin_info/info.json": {
+        "Plugin permettant d'ajouter le support de clef GSM (pour les SMS uniquement)": "Plugin permettant d'ajouter le support de clef GSM (pour les SMS uniquement)"
     },
-    "plugins/sms_custom/core/class/sms_custom.class.php": {
+    "plugins/sms/core/class/sms.class.php": {
         "Signal": "Sinyal",
         "Message": "Mesaj",
         "Expediteur": "Gönderen",
