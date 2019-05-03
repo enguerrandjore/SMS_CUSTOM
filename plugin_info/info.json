@@ -1,5 +1,5 @@
 {
-	"id" : "sms_custom_custom",
+	"id" : "sms_custom",
 	"name" : "sms_custom",
 	"description" : "Plugin ajoutant la gestion (envoi/réception) des sms_custom à Jeedom.Avec ce plugin vous pouvez ainsi être notifié par sms_custom, voir grâce au moteur d'interactions poser une question ou déclencher une action via sms_custom.(Nécessite une clé 3G et une carte SIM ).",
 	"licence" : "AGPL",
