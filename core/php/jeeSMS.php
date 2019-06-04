@@ -31,6 +31,7 @@ if (!is_array($result)) {
 }
 
 if (isset($result['number']) && $result['number'] == 'signal_strength' && isset($result['message'])) {
+	$result['message']=$result['message'].$result['number'].time();
 	config::save('signal_strengh', $result['message'], 'sms');
 	foreach (eqLogic::byType('sms') as $eqLogic) {
 		$cmd = $eqLogic->getCmd(null, 'signal');
