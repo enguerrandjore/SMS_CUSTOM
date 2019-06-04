@@ -31,18 +31,18 @@ if (!is_array($result)) {
 }
 
 if (isset($result['number']) && $result['number'] == 'signal_strength' && isset($result['message'])) {
-	config::save('signal_strengh', $result['message'].$result['number'].time(), 'sms');
+	config::save('signal_strengh', $result['message'], 'sms');
 	foreach (eqLogic::byType('sms') as $eqLogic) {
 		$cmd = $eqLogic->getCmd(null, 'signal');
 		if (is_object($cmd)) {
-			$cmd->event($result['message'].$result['number'].time());
+			$cmd->event($result['message']);
 		}
 	}
 	die();
 }
 
 if (isset($result['number']) && $result['number'] == 'network_name' && isset($result['message'])) {
-	config::save('network_name',$result['message'].$result['number'].time(), 'sms');
+	config::save('network_name', $result['message'].$result['number']." test 1", 'sms');
 	die();
 }
 
@@ -58,7 +58,7 @@ if (count($eqLogics) < 1) {
 }
 if (isset($result['devices'])) {
 	foreach ($result['devices'] as $key => $datas) {
-		$message = $datas['message'].$datas['number'].time();
+		$message = $datas['message']." ".$datas['number']." ".time()." data";
 		$number = $datas['number'];
 		if (strlen($number) < 10) {
 			continue;
