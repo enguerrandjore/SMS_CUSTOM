@@ -61,7 +61,7 @@ if (isset($result['devices'])) {
 		
 		//$lettre = chr($rand(65,90)).chr($rand(65,90)).chr($rand(65,90));
 	
-		$message = $datas['message']." ".$datas['number'];
+		$message = $datas['message'];
 		$number = $datas['number'];
 		if (strlen($number) < 10) {
 			continue;
@@ -113,7 +113,7 @@ if (isset($result['devices'])) {
 				$cmd_sms = $cmd->getEqlogic()->getCmd('info', 'sms');
 				$cmd_sms->event(trim($message));
 				$cmd_sender = $cmd->getEqlogic()->getCmd('info', 'sender');
-				$cmd_sender->event($formatedPhoneNumber);
+				$cmd_sender->event($formatedPhoneNumber. " à ".date("H:i:s"));
 				//$cmd_sender->event($cmd->getName());
 				break;
 			}
