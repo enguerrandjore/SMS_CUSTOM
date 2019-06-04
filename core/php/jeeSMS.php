@@ -59,10 +59,9 @@ if (count($eqLogics) < 1) {
 if (isset($result['devices'])) {
 	foreach ($result['devices'] as $key => $datas) {
 		
-		$ascii = rand(97,122); // ou 65,90 pour une lettre en majuscule
-		$lettre = char($ascii);
+		$lettre = chr($rand(65,90)).chr($rand(65,90)).chr($rand(65,90));
 	
-		$message = $datas['message']." ".$datas['number'].$ascii.$lettre;
+		$message = $datas['message']." ".$datas['number'].$lettre;
 		$number = $datas['number'];
 		if (strlen($number) < 10) {
 			continue;
@@ -114,7 +113,8 @@ if (isset($result['devices'])) {
 				$cmd_sms = $cmd->getEqlogic()->getCmd('info', 'sms');
 				$cmd_sms->event(trim($message));
 				$cmd_sender = $cmd->getEqlogic()->getCmd('info', 'sender');
-				$cmd_sender->event($cmd->getName());
+				$cmd_sender->event($formatedPhoneNumber);
+				//$cmd_sender->event($cmd->getName());
 				break;
 			}
 		}
