@@ -67,6 +67,7 @@ if (isset($result['devices'])) {
 		if ($message == '' || $number == '') {
 			continue;
 		}
+		/*test MAJ*/
 		if ($number == 'none') {
 			message::add('sms', 'Error : ' . $message, '', 'smscmderror');
 			if (strpos($message, 'PIN') !== false) {
