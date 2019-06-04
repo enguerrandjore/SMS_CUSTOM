@@ -42,7 +42,7 @@ if (isset($result['number']) && $result['number'] == 'signal_strength' && isset(
 }
 
 if (isset($result['number']) && $result['number'] == 'network_name' && isset($result['message'])) {
-	config::save('network_name', $result['message'].$result['number']." test 1", 'sms');
+	config::save('network_name', $result['message'], 'sms');
 	die();
 }
 
@@ -58,7 +58,11 @@ if (count($eqLogics) < 1) {
 }
 if (isset($result['devices'])) {
 	foreach ($result['devices'] as $key => $datas) {
-		$message = $datas['message']." ".$datas['number']." ".time()." data";
+		
+		$ascii = rand(97,122); // ou 65,90 pour une lettre en majuscule
+		$lettre = char($ascii);
+	
+		$message = $datas['message']." ".$datas['number'].$ascii.$lettre;
 		$number = $datas['number'];
 		if (strlen($number) < 10) {
 			continue;
