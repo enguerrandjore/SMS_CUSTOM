@@ -59,9 +59,9 @@ if (count($eqLogics) < 1) {
 if (isset($result['devices'])) {
 	foreach ($result['devices'] as $key => $datas) {
 		
-		$lettre = chr($rand(65,90)).chr($rand(65,90)).chr($rand(65,90));
+		//$lettre = chr($rand(65,90)).chr($rand(65,90)).chr($rand(65,90));
 	
-		$message = $datas['message']." ".$datas['number'].$lettre;
+		$message = $datas['message']." ".$datas['number'];
 		$number = $datas['number'];
 		if (strlen($number) < 10) {
 			continue;
