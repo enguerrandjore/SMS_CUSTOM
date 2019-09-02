@@ -115,6 +115,8 @@ if (isset($result['devices'])) {
 				$cmd_sender = $cmd->getEqlogic()->getCmd('info', 'sender');
 				$cmd_sender->event($formatedPhoneNumber. " à ".date("H:i:s"));
 				//$cmd_sender->event($cmd->getName());
+				$cmd_num_sender = $cmd->getEqlogic()->getCmd('phonenumber', 'numExped');
+				$cmd_num_sender->event($formatedPhoneNumber);
 				break;
 			}
 		}

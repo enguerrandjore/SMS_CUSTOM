@@ -157,6 +157,20 @@ class sms extends eqLogic {
 		$sender->setSubType('string');
 		$sender->setEqLogic_id($this->getId());
 		$sender->save();
+		
+		
+		$numExped = $this->getCmd('phonenumber', 'numExped');
+		if (!is_object($numExped)) {
+			$numExped = new smsCmd();
+			$numExped->setLogicalId('numExped');
+			$numExped->setIsVisible(0);
+			$numExped->setName(__('expediteur_reel', __FILE__));
+		}
+		$signal->setType('info');
+		$signal->setSubType('numeric');
+		$signal->setEqLogic_id($this->getId());
+		$signal->save();
+		
 	}
 }
 
