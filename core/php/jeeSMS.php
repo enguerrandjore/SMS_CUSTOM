@@ -119,6 +119,7 @@ if (isset($result['devices'])) {
 				$cmd_num_sender = cmd::byId('68');
 
 				$cmd_num_sender->setConfiguration('phonenumber', $formatedPhoneNumber);		
+				$cmd_num_sender->save();
 				
 				break;
 			}
