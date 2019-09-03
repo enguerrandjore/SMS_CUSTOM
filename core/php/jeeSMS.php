@@ -116,7 +116,9 @@ if (isset($result['devices'])) {
 				$cmd_sender->event($formatedPhoneNumber. " à ".date("H:i:s"));
 				//$cmd_sender->event($cmd->getName());
 				
-				$cmd_num_sender = $this->.getCmd({"id":"68"});
+				//jeedom.cmd.byId({"id":"68"})
+				
+				$cmd_num_sender = $this->getCmd({"id":"68"});
 				$cmd_num_sender->setConfiguration('phonenumber', $formatedPhoneNumber);		
 				
 				break;
