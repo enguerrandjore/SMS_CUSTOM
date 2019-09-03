@@ -110,16 +110,20 @@ if (isset($result['devices'])) {
 				} else {
 					log::add('sms', 'debug', __("Interaction désactivée.", __FILE__));
 				}
+				// Ordre important sur le déclanchement du scénario
 				$cmd_sms = $cmd->getEqlogic()->getCmd('info', 'sms');
 				$cmd_sms->event(trim($message));
-				$cmd_sender = $cmd->getEqlogic()->getCmd('info', 'sender');
-				$cmd_sender->event($formatedPhoneNumber. " à ".date("H:i:s"));
-				//$cmd_sender->event($cmd->getName());
 				
 				$cmd_num_sender = cmd::byString('#[Vue ensemble][sms_karine][expediteur_reel]#');
 				//$cmd_num_sender = cmd::byId('68');
 				$cmd_num_sender->setConfiguration('phonenumber', $formatedPhoneNumber);		
 				$cmd_num_sender->save();
+				
+				$cmd_sender = $cmd->getEqlogic()->getCmd('info', 'sender');
+				$cmd_sender->event($formatedPhoneNumber. " à ".date("H:i:s"));
+				//$cmd_sender->event($cmd->getName());
+				
+
 				
 				break;
 			}
