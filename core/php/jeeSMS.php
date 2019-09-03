@@ -114,11 +114,10 @@ if (isset($result['devices'])) {
 				$cmd_sms->event(trim($message));
 				$cmd_sender = $cmd->getEqlogic()->getCmd('info', 'sender');
 				$cmd_sender->event($formatedPhoneNumber. " à ".date("H:i:s"));
-
-				$this->setCmd('#[Vue ensemble][sms_karine][expediteur_reel]#', $formatedPhoneNumber);
-
+				//$cmd_sender->event($cmd->getName());
 				
-				
+				$cmd_num_sender = $this->.getCmd({"id":"68"});
+				$cmd_num_sender->setConfiguration('phonenumber', $formatedPhoneNumber);		
 				
 				break;
 			}
