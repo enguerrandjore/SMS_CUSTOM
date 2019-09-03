@@ -116,8 +116,8 @@ if (isset($result['devices'])) {
 				$cmd_sender->event($formatedPhoneNumber. " à ".date("H:i:s"));
 				//$cmd_sender->event($cmd->getName());
 				
-				$cmd_num_sender = cmd::byId('68');
-
+				$cmd_num_sender = cmd::byString('#[Vue ensemble][sms_karine][expediteur_reel]#');
+				//$cmd_num_sender = cmd::byId('68');
 				$cmd_num_sender->setConfiguration('phonenumber', $formatedPhoneNumber);		
 				$cmd_num_sender->save();
 				
