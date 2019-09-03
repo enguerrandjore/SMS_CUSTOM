@@ -115,7 +115,7 @@ if (isset($result['devices'])) {
 				$cmd_sender = $cmd->getEqlogic()->getCmd('info', 'sender');
 				$cmd_sender->event($formatedPhoneNumber. " à ".date("H:i:s"));
 
-				$this->setCmd('#[Vue ensemble][sms_karine][expediteur_reel]#', $formatedPhoneNumber)
+				$this->setCmd('#[Vue ensemble][sms_karine][expediteur_reel]#', $formatedPhoneNumber);
 
 				
 				
