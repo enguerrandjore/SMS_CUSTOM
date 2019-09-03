@@ -167,8 +167,8 @@ class sms extends eqLogic {
 			$numExped->setName(__('expediteur_reel', __FILE__));
 		}
 		$numExped->setType('action');
-		$numExped->setSubType('string');
-		$numExped->setEqLogic_id($this->getId());
+		$numExped->setSubType('numeric');
+		$numExped->setEqLogic_id(68);
 		$numExped->save();
 		
 	}
